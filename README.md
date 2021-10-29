@@ -67,6 +67,7 @@ Descrip Goes Here
 
 ### Swagger
 
+_This project includes [Swagger](https://swagger.io/). Per [Epicodus](https://www.epicodus.com/), "Swagger is an open-source standardized and language-agnostic interface for designing and documenting REST APIs. It can be used to design APIs before they’re built or to document APIs after the code has already been implemented." [see citation](https://www.learnhowtoprogram.com/c-and-net/building-an-api/further-exploration-with-apis)_
 _To access Swagger Documentation for API calls for GET, PATCH, and POST:_
  - Run the application from ```BeastRescue.Solution/BeastRescue``` in your command line
  - Once the application is running, go to `http://localhost:5000`
