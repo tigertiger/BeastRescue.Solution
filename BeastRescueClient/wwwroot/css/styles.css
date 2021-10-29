@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Megrim&display=swap');
+
+body {
+background-color:#49462E;
+color:#f8efe5;
+font-family: 'Averia Libre', cursive;
+}
+
+.container {
+  padding: 3% 0 0 1%;
+}
+
+.column {
+  float:right;
+  width:10%;
+}
+
+#navBar {
+  position:fixed;
+  left:0px;
+  top:0px;
+  width:100%;
+  padding:8px;
+  font-weight:100;
+  text-transform: lowercase;
+  letter-spacing:.2rem;
+}
+
+.gridContainer {
+  display:grid;
+  grid-template-areas:
+    'main main main';
+  grid-gap: 20px;
+}
+
+h1 {
+  font-family:'Megrim', cursive;
+  text-align:center;
+  padding:3% 0 3% 0;
+  font-size:50pt;
+}
+
+a {
+  color:#f8efe5;
+}
+
+a:hover {
+  color:#918735;
+  text-decoration:none;
+}
+
+.hullo {
+  text-transform:lowercase;
+  font-size:15pt;
+}
+
+.gridItem {
+  text-align:center;
+}
+
+.gridItem img {
+  border-radius:50%;
+}
+
+.gridItem img:hover {
+  width:350px;
+}

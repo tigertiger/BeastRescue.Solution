@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+@using BeastRescueClient.Models
+
+<h1>All Beasts:</h1>
+
+<ol>
+@foreach (Beast beast in Model)
+{
+    <ul>
+        <img src="@beast.Photo" width="300px"/>
+        <li>ID: @beast.BeastId</li>
+        <li>Name: @beast.Name</li>
+        <li>Species: @beast.Species</li>
+        <li>Temperment: @beast.Temperment</li>
+        <li>Description: @beast.Description</li>
+        <li>Age: @beast.Age</li>
+        <li>Gender: @beast.Gender</li>
+    </ul>
+    <a href="/Beasts/Details/@(beast.BeastId)"><p>View Details</p></a>
+    <br>
+}
+</ol>

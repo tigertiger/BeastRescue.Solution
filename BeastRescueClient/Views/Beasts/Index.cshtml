@@ -1,21 +1,17 @@
+@{
+  Layout = "_Layout";
+}
 @using BeastRescueClient.Models
 
-<h1>All Beasts:</h1>
+<h1>Our Friend Beasts:</h1>
 
-<ol>
+<div class="gridContainer">
 @foreach (Beast beast in Model)
 {
-    <ul>
-        <img src="@beast.Photo" width="200px"/>
-        <li>ID: @beast.BeastId</li>
-        <li>Name: @beast.Name</li>
-        <li>Species: @beast.Species</li>
-        <li>Temperment: @beast.Temperment</li>
-        <li>Description: @beast.Description</li>
-        <li>Age: @beast.Age</li>
-        <li>Gender: @beast.Gender</li>
-    </ul>
-    <a href="/Beasts/Details/@(beast.BeastId)"><p>View Details</p></a>
+  <div class="gridItem">
+    <a href="/Beasts/Details/@(beast.BeastId)"><img class="portraitSmall" src="@beast.Photo" width="300px"/><br />
+    <p><span class="hullo">Meet @beast.Name</span></p></a>
     <br>
+  </div>
 }
-</ol>
+</div>

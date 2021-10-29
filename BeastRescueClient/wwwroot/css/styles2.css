@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Megrim&display=swap');
+
+body {
+  background: url("/../../img/karsten-wurth-karsten-wuerth-drdj51vHFkg-unsplash.jpeg")no-repeat center center fixed rgba(255, 255, 255, 0.13);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-blend-mode:overlay;
+}
+
+.container {
+  padding: 3% 0 0 0%;
+}
+
+.centerBlock {
+  width:70%;
+  height: 600px;
+  margin:8% auto;
+  box-sizing: border-box;
+  padding:2%;
+  text-align: center;
+  letter-spacing: .3rem;
+  }
+
+  .centerBlock h1 {
+    font-size: 100pt;
+    font-family:'Megrim', cursive;
+    line-height:50px;
+  }
+
+  .centerBlock h3 {
+    font-size: 30pt;
+    letter-spacing:2rem;
+    margin-top:-15px;
+    padding-bottom:20px;
+    padding-top:35px;
+    font-family:'Megrim', cursive;
+  }
+
+  .centerBlock h4 {
+    font-size: 20pt;
+    font-family:'Megrim', cursive;
+    letter-spacing:1rem;
+  }
+
+  .centerBlock a {
+    color:#847E52;
+  }
+
+  .centerBlock a:hover {
+    text-decoration:none;
+    color:#585221a1;
+    text-transform:lowercase;
+  }

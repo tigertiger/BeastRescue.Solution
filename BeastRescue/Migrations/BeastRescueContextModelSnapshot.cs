@@ -38,6 +38,7 @@ namespace BeastRescue.Migrations
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("Species")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("Temperment")
@@ -55,7 +56,7 @@ namespace BeastRescue.Migrations
                             Description = "300+ pounds, black and pink blotch patterning, scarred snout",
                             Gender = "Male",
                             Name = "Doctor",
-                            Photo = "https://unsplash.com/photos/_bweKYLQbGU",
+                            Photo = "/../../img/pauline-bernfeld-S99OqS453go-unsplash.jpeg",
                             Species = "Hog",
                             Temperment = "Aloof, but loving"
                         },
@@ -66,9 +67,53 @@ namespace BeastRescue.Migrations
                             Description = "Goldeny, cream-colored fur. Slender.",
                             Gender = "Female",
                             Name = "Murna",
-                            Photo = "https://unsplash.com/photos/BOuggN1tMEk",
+                            Photo = "/../../img/nighthawk-shoots-BOuggN1tMEk-unsplash.jpeg",
                             Species = "Cow",
                             Temperment = "Very sweet; a goof"
+                        },
+                        new
+                        {
+                            BeastId = 3,
+                            Age = 9,
+                            Description = "Silvery, quite fatsome",
+                            Gender = "Female",
+                            Name = "Biddy",
+                            Photo = "/../../img/noelle-KmrmYDyiExg-unsplash.jpeg",
+                            Species = "Hog",
+                            Temperment = "Crotchety; recovering from trauma; big love dove, really"
+                        },
+                        new
+                        {
+                            BeastId = 4,
+                            Age = 4,
+                            Description = "Looks like a haystack",
+                            Gender = "Female",
+                            Name = "Haystack",
+                            Photo = "/../../img/callum-hill-Zx6ZD3n6x4A-unsplash.jpeg",
+                            Species = "Hog",
+                            Temperment = "Mercurial, playful, lazy"
+                        },
+                        new
+                        {
+                            BeastId = 5,
+                            Age = 15,
+                            Description = "Furry, brown, large",
+                            Gender = "Male",
+                            Name = "Lonely",
+                            Photo = "/../../img/mark-basarab-y421kXlUOQk-unsplash.jpeg",
+                            Species = "Brown Bear",
+                            Temperment = "Social & snuggly"
+                        },
+                        new
+                        {
+                            BeastId = 6,
+                            Age = 8,
+                            Description = "Stinky, loud, mustachioed",
+                            Gender = "Male",
+                            Name = "Hobnail",
+                            Photo = "/../../img/taylor-wright-xFzaWaNxXSc-unsplash.jpeg",
+                            Species = "Sea Lion",
+                            Temperment = "Unruly!"
                         });
                 });
 #pragma warning restore 612, 618
