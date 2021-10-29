@@ -71,3 +71,7 @@ a:hover {
 .gridItem img:hover {
   width:350px;
 }
+
+.deets a {
+  text-decoration:underline;
+}

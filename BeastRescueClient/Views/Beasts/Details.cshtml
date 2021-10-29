@@ -5,16 +5,9 @@
 
 <h1>@Model.Name</h1>
 
-<ol>
-    <ul>
-        <img src="@Model.Photo" width="300px"/>
-        <li>ID: @Model.BeastId</li>
-        <li>Name: @Model.Name</li>
-        <li>Species: @Model.Species</li>
-        <li>Temperment: @Model.Temperment</li>
-        <li>Description: @Model.Description</li>
-        <li>Age: @Model.Age</li>
-        <li>Gender: @Model.Gender</li>
-    </ul>
-    <br>
-</ol>
+<img src="@Model.Photo" width="300px"/>
+<div class="deets">
+  @Model.Species | @Model.Age years old | @Model.Gender<br />
+  <p>Meet @Model.Name! @Model.Name @Model.Description. In temperment, @Model.Name is @Model.Temperment.</p>
+  <p>Please <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">contact us</a> to meet @Model.Name in person</p>
+</div>
