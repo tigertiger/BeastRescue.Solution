@@ -77,6 +77,21 @@ namespace BeastRescue.Controllers
       return NoContent();
     }
 
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteBeast(int id)
+    {
+      var beast = await _db.Beasts.FindAsync(id);
+      if (beast == null)
+      {
+        return NotFound();
+      }
+
+      _db.Beasts.Remove(beast);
+      await _db.SaveChangesAsync();
+
+      return NoContent();
+    }
+
 
 
     private bool BeastExists(int id)
