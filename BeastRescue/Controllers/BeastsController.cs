@@ -26,6 +26,15 @@ namespace BeastRescue.Controllers
     {
       return await _db.Beasts.ToListAsync();
     }
+
+    [HttpPost]
+    public async Task<ActionResult<Beast>> Post(Beast beast)
+    {
+      _db.Beasts.Add(beast);
+      await _db.SaveChangesAsync();
+
+      return CreatedAtAction("Post", new {id = beast.BeastId}, beast);
+    }
   }
 
 }
