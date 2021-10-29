@@ -1,7 +1,10 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
-namespace BeastRescue
+namespace BeastRescueClient.Models
 {
     public class Beast
     {
@@ -14,5 +17,16 @@ namespace BeastRescue
         public int Age { get; set; }
         public string Gender { get; set; }
         public string Photo {get; set;}
+
+        public static List<Beast> GetBeasts()
+    {
+        var apiCallTask = ApiHelper.GetAll();
+        var result = apiCallTask.Result;
+
+        JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
+        List<Beast> beastList = JsonConvert.DeserializeObject<List<Beast>>(jsonResponse.ToString());
+
+        return beastList;
+    }
     }
 }

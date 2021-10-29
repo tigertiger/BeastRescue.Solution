@@ -1,26 +1,30 @@
-using Microsoft.AspNetCore.Mvc;
-using BeastRescue.Models;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
-using System.Dynamic;
+using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
-namespace BeastRescue.Controllers
+namespace BeastRescueClient.Controllers
 {
-  public class HomeController : Controller
-  {
-    private readonly BeastRescueContext _db;
-
-    public HomeController(BeastRescueContext db)
+    public class HomeController : Controller
     {
-      _db = db;
-    }
+        private readonly ILogger<HomeController> _logger;
 
-    [HttpGet("/")]
-    public ActionResult Index() { 
-      return View(); 
+        public HomeController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
+        }
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
     }
-  
-  }
 }
