@@ -18,7 +18,7 @@ namespace BeastRescueClient.Controllers
 
     public IActionResult Index()
     {
-      var allBeasts = Beast.GetBeasts().OrderByDescending(model => model.Name);
+      var allBeasts = Beast.GetBeasts();
       return View(allBeasts);
     }
 
