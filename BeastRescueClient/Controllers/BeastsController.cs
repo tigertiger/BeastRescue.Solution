@@ -22,5 +22,11 @@ namespace BeastRescueClient.Controllers
       return View(allBeasts);
     }
 
+    public IActionResult Details(int id)
+    {
+      var beast = Beast.GetDetails(id);
+      return View(beast);
+    }
+
   }
 }

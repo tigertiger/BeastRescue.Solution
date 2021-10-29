@@ -3,22 +3,18 @@
 }
 @using BeastRescueClient.Models
 
-<h1>All Beasts:</h1>
+<h1>@Model.Name</h1>
 
 <ol>
-@foreach (Beast beast in Model)
-{
     <ul>
-        <img src="@beast.Photo" width="300px"/>
-        <li>ID: @beast.BeastId</li>
-        <li>Name: @beast.Name</li>
-        <li>Species: @beast.Species</li>
-        <li>Temperment: @beast.Temperment</li>
-        <li>Description: @beast.Description</li>
-        <li>Age: @beast.Age</li>
-        <li>Gender: @beast.Gender</li>
+        <img src="@Model.Photo" width="300px"/>
+        <li>ID: @Model.BeastId</li>
+        <li>Name: @Model.Name</li>
+        <li>Species: @Model.Species</li>
+        <li>Temperment: @Model.Temperment</li>
+        <li>Description: @Model.Description</li>
+        <li>Age: @Model.Age</li>
+        <li>Gender: @Model.Gender</li>
     </ul>
-    <a href="/Beasts/Details/@(beast.BeastId)"><p>View Details</p></a>
     <br>
-}
 </ol>

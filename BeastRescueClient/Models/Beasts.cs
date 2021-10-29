@@ -19,7 +19,7 @@ namespace BeastRescueClient.Models
         public string Photo {get; set;}
 
         public static List<Beast> GetBeasts()
-    {
+        {
         var apiCallTask = ApiHelper.GetAll();
         var result = apiCallTask.Result;
 
@@ -27,6 +27,17 @@ namespace BeastRescueClient.Models
         List<Beast> beastList = JsonConvert.DeserializeObject<List<Beast>>(jsonResponse.ToString());
 
         return beastList;
-    }
+        }
+
+        public static Beast GetDetails(int id)
+        {
+        var apiCallTask = ApiHelper.Get(id);
+        var result = apiCallTask.Result;
+
+        JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
+        Beast beast = JsonConvert.DeserializeObject<Beast>(jsonResponse.ToString());
+
+        return beast;
+        }
     }
 }
