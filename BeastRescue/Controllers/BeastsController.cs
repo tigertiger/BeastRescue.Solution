@@ -27,6 +27,18 @@ namespace BeastRescue.Controllers
       return await _db.Beasts.ToListAsync();
     }
 
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Beast>> GetBeast(int id)
+    {
+      var beast = await _db.Beasts.FindAsync(id);
+
+      if (beast == null)
+      {
+        return NotFound();
+      }
+      return beast;
+    }
+
     [HttpPost]
     public async Task<ActionResult<Beast>> Post(Beast beast)
     {
@@ -34,6 +46,42 @@ namespace BeastRescue.Controllers
       await _db.SaveChangesAsync();
 
       return CreatedAtAction("Post", new {id = beast.BeastId}, beast);
+    }
+
+    [HttpPatch("{id}")]
+    public async Task<IActionResult> Patch(int id, Beast beast)
+    {
+      if (id != beast.BeastId)
+      {
+        return BadRequest();
+      }
+
+      _db.Entry(beast).State = EntityState.Modified;
+
+      try
+      {
+        await _db.SaveChangesAsync();
+      }
+      catch (DbUpdateConcurrencyException)
+      {
+        if (!BeastExists(id))
+        {
+          return NotFound();
+        }
+        else
+        {
+          throw;
+        }
+      }
+
+      return NoContent();
+    }
+
+
+
+    private bool BeastExists(int id)
+    {
+      return _db.Beasts.Any(e => e.BeastId == id);
     }
   }
 
