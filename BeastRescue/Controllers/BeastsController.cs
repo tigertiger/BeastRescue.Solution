@@ -22,9 +22,26 @@ namespace BeastRescue.Controllers
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Beast>>> Get()
+    public async Task<ActionResult<IEnumerable<Beast>>> Get(string species, int age, string gender)
     {
-      return await _db.Beasts.ToListAsync();
+      var query = _db.Beasts.AsQueryable();
+      
+      if(species != null)
+      {
+        query = query.Where(entry => entry.Species == species);
+      }
+
+      if(age != 0)
+      {
+        query = query.Where(entry => entry.Age == age);
+      }
+
+      if(gender != null)
+      {
+        query = query.Where(entry => entry.Gender == gender);
+      }
+
+      return await query.ToListAsync();
     }
 
     [HttpGet("{id}")]
