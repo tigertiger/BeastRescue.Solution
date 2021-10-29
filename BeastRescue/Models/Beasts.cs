@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace BeastRescue
 {
@@ -6,6 +7,7 @@ namespace BeastRescue
     {
         public int BeastId { get; set; }
         public string Name { get; set; }
+        [Required]
         public string Species { get; set; }
         public string Temperment {get; set;}
         public string Description {get; set;}

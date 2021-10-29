@@ -34,7 +34,17 @@ namespace BeastRescue
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "BeastRescue", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { 
+                    Title = "BeastRescue", 
+                    Version = "v1",
+                    Description = "Beast Rescue Rescues Beasts",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Beast Rescue of the Pacific Northwest",
+                        Email = string.Empty,
+                        Url = new Uri("https://unsplash.com/photos/V5pZ9F0M4vU"),
+                    } 
+                });
             });
         }
 
