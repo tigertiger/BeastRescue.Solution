@@ -1,5 +1,5 @@
 <p align="center">
-<img src="/../../img/callum-hill-Zx6ZD3n6x4A-unsplash.jpeg" width="250" border-radius="50%" /><br/><br />
+<img src="BeastRescueClient/img/callum-hill-Zx6ZD3n6x4A-unsplash.jpeg" width="250" border-radius="50%" /><br/><br />
 <big>Beast Rescue of the Pacific Northwest</big>
 </p>
 <p align="center">
