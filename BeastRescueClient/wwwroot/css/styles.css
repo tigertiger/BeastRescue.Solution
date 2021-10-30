@@ -18,7 +18,7 @@ body {
 
 .column {
   float:right;
-  width:10%;
+  width:15%;
 }
 
 #navBar {
@@ -30,6 +30,10 @@ body {
   font-weight:100;
   text-transform: lowercase;
   letter-spacing:.2rem;
+}
+
+#navBar a:hover {
+  color:#384957;
 }
 
 .gridContainer {
@@ -51,7 +55,7 @@ a {
 }
 
 a:hover {
-  color:#918735;
+  color:#b3a74e;
   text-decoration:none;
 }
 
