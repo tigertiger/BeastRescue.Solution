@@ -1,15 +1,15 @@
 <p align="center">
-<img src="BeastRescueClient/wwwroot/img/callum-hill-Zx6ZD3n6x4A-unsplash.jpeg" width="250" style="border-radius=50%;" /><br/><br />
+<img src="BeastRescueClient/wwwroot/img/haystack-round.png" width="250" style="border-radius=50%;" /><br/><br />
 <big>Beast Rescue of the Pacific Northwest</big>
 </p>
 <p align="center">
-by <i>Melissa Scmi</i>
+<i>Melissa Scmi</i>
 <br/>
 
 ------------------------------
 
 <br/>
-This API & companion MVC app allow users to browse the current animals living at Beast Rescue of the Pacific Northwest.<br/><br />
+This API & companion MVC app allow users to browse, add to, & update the current animals living at Beast Rescue of the Pacific Northwest.<br/><br />
 
 ------------------------------
 
