@@ -12,7 +12,9 @@
 This API & companion MVC app allow users to browse, add to, & update the current animals living at Beast Rescue of the Pacific Northwest.<br/><br />
 
 ------------------------------
-
+<p align="center">
+<img src="BeastRescueClient/wwwroot/img/BeastRescue-Splash.png" width="600" /><br/><br />
+</p>
 <br/>
 
 ### Technologies Used
